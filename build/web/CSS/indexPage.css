@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card img{
+    height: 190px;
+    width: 150px;
+    margin: auto;
+    margin-top: 10px;
+
+}
+/* Custom CSS for cards */
+.card {
+    position: relative;
+    background-color:white;
+    border-radius:0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Space between cards */
+    height: 300px; /* Adjust card height */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-buttons {
+    position: absolute;
+    bottom: 10px;
+    margin-left:20px;
+    display: none;
+    z-index: 1;
+    color: white;
+}
+.card:hover .card-buttons {
+    display: flex;
+    justify-content: space-evenly;
+ 
+}
+/*.card:hover {
+    background-color:white;
+}*/
+.card:hover img{
+    opacity: 0.3;
+}
+
+.card-buttons button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.button{
+    background-color: green;
+}
+
+.alert{
+    width:330px;
+    text-align: center;
+    margin: auto;
+}
+
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .card {
+        height: auto;
+    }
+}
+@media screen and (max-width: 576px) {
+    .card-buttons {
+        flex-wrap: wrap; /* Wrap buttons on small screens */
+    }
+    .card-buttons button {
+        width: 100%; /* Make buttons full width on small screens */
+        margin-bottom: 5px; /* Add space between buttons */
+    }
+}
+

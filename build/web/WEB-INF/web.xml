@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+    <servlet>
+        <servlet-name>MY</servlet-name>
+        <servlet-class>com.user_servlet.MyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SK</servlet-name>
+        <servlet-class>com.user_servlet.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TK</servlet-name>
+        <servlet-class>com.user_servlet.EditServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UK</servlet-name>
+        <servlet-class>com.user_servlet.AddBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PK</servlet-name>
+        <servlet-class>com.user_servlet.Delete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>suraj</servlet-name>
+        <servlet-class>com.admin.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>K</servlet-name>
+        <servlet-class>com.user_servlet.addOldBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>U</servlet-name>
+        <servlet-class>com.user_servlet.Edit_profileServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>Order</servlet-name>
+        <servlet-class>com.user_servlet.OrderServlet</servlet-class>
+    </servlet>
+  
+    <servlet-mapping>
+        <servlet-name>suraj</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>K</servlet-name>
+        <url-pattern>/addOldBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>U</servlet-name>
+        <url-pattern>/Edit_profileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UK</servlet-name>
+        <url-pattern>/AddBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MY</servlet-name>
+        <url-pattern>/MyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SK</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TK</servlet-name>
+        <url-pattern>/EditServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PK</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Order</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <filter>
+        <filter-name>filter</filter-name>
+        <filter-class>com.filter.MyFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>filter</filter-name>
+        <url-pattern>/StoryBooks.jsp</url-pattern>
+        <url-pattern>/FrictionBooks.jsp</url-pattern>
+        <url-pattern>/ProgrammingBooks.jsp</url-pattern>
+        <url-pattern>/HistoricalBooks.jsp</url-pattern>
+        <url-pattern>/AdventureBooks.jsp</url-pattern>
+    </filter-mapping>
+</web-app>
